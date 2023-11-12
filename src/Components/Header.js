@@ -1,8 +1,13 @@
 import React from 'react'
+import '../index.css'
+
+//Import components
+import Socials from './Socials';
+
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <header className='header'>Header</header>
   )
 }
 
