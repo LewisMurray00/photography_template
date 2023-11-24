@@ -40,6 +40,8 @@ const Header = () => {
 
         <Socials />
 
+        <MobileNav />
+
       </div>
 
     </header>
