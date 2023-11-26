@@ -7,6 +7,19 @@ import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 
+//Menu variants
+const menuVariants = {
+  hidden: {
+    x: '100%'
+  },
+  show: {
+    x: 0,
+    tranition: {
+      ease:[0.6, 0.01, -0.05, 0.9],
+    },
+  }
+}
+
 const MobileNav = () => {
 
   const [openMenu, setOpenMenu] = useState(false);
@@ -15,13 +28,21 @@ const MobileNav = () => {
   return (
     <nav className='text-primary xl:hidden'>
 
-      <div className='text-3xl cursor-pointer'>
+      <div onClick={() => setOpenMenu(true)} className='text-3xl cursor-pointer'>
         <CgMenuRight />
       </div>
 
-      <div className='bg-white shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-20'>
+      <motion.div 
+        variants={menuVariants} 
+        initial='hidden'
+        animate={openMenu ? 'show' : ''}
+        className='bg-white shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-20'
+      >
 
-      <div className='text-4xl absolute z-30 left-4 top-14 text-primary cursor-pointer'>
+      <div 
+        onClick={() => setOpenMenu(false)} 
+        className='text-4xl absolute z-30 left-4 top-14 text-primary cursor-pointer'
+      >
         <IoMdClose />
       </div>
 
@@ -39,7 +60,7 @@ const MobileNav = () => {
             <Link to='/contact'>Contact</Link>
           </li>
         </ul>
-      </div>
+      </motion.div>
 
     </nav>
   )
