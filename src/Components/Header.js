@@ -15,9 +15,8 @@ const Header = () => {
       
       <div className='flex flex-col lg:flex-row-reverse lg:items-center w-full justify-between float-right'>
         
-        {/* Logo
-        <Link to={'/'}>
-          <img src={Logo} alt='Logo' />
+        {/* <Link to={'/'}>
+          <img src={Logo} alt='Logo' className='max-w-[200px] ' />
         </Link> */}
 
         <nav className='hidden lg:flex gap-x-12 font-semibold '>
@@ -37,12 +36,11 @@ const Header = () => {
             Contact
           </Link>
         </nav>
-
+      </div>
+        
         <Socials />
 
         <MobileNav />
-
-      </div>
 
     </header>
   )
