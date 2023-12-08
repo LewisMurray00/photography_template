@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
  
 const About = () => {
   return (
-    <section className='section bg-yellow-200'>
+    <section className='section'>
       <div className='container mx-auto h-full relative'>
         
         {/* Text and image wrapper */}
@@ -21,7 +21,7 @@ const About = () => {
           {/* Text */}
           <div className='flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start'>
             <h1 className='h1'>About Me</h1>
-            <p className='mb-12' >
+            <p className='mb-12 max-w-sm' >
               Lorem ipsum dolor sit amet, 
               consectetur adipiscing elit. 
               Vivamus sapien libero, 
@@ -33,7 +33,7 @@ const About = () => {
               diam justo sodales nibh, 
               vitae laoreet.
             </p>
-            <Link to={'/portfolio'}>View My Work</Link>
+            <Link to={'/portfolio'} className='btn' >View My Work</Link>
           </div>
         </div>
 
