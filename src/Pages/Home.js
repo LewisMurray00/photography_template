@@ -3,11 +3,25 @@ import React from 'react'
 //import images
 import WomanImg from '../Img/Home/HomeWoman.png';
 
+//import link
 import { Link } from 'react-router-dom';
+
+//import motion
+import {motion} from 'framer-motion';
+
+//import transition
+import { transition1 } from '../transitions';
+
 
 const Home = () => {
   return (
-    <section className='section'>
+    <motion.section
+      // initial={{ opacity: 0 }} 
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
+      // transition={transition1}
+      className='section'
+    >
       
       <div className='container mx-auto h-full relative'>
         {/* Text and image wrapper */}
@@ -32,7 +46,7 @@ const Home = () => {
         
       </div>
 
-    </section>
+    </motion.section>
   )
 }
 
