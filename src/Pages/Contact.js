@@ -10,7 +10,7 @@ const Contact = () => {
       <div className='container mx-auto h-full'>
         <div className='flex flex-col lg:flex-row h-full items-center justify-start pt-36 gap-x-8 text-center lg:text-left '>
           {/* bg */}
-          <div>bg</div>
+          <div className='hidden lg:flex bg-[#eef7f9] absolute bottom-0 left-0 right-0 top-72 -z-10'>bg</div>
 
           {/* Text & Form */}
           <div className='lg:flex-1 lg:pt-32 px-4'>
@@ -28,7 +28,9 @@ const Contact = () => {
           </div>
 
           {/* Image */}
-          <div>Image</div>
+          <div className='lg:flex-1'>
+            <img src={portfolioImage} alt="" />
+          </div>
         </div>
       </div>
 
