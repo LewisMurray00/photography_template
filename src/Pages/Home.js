@@ -16,17 +16,23 @@ import { transition1 } from '../transitions';
 const Home = () => {
   return (
     <motion.section
-      // initial={{ opacity: 0 }} 
-      // animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
-      // transition={transition1}
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={transition1}
       className='section'
     >
       
       <div className='container mx-auto h-full relative'>
         {/* Text and image wrapper */}
         <div className='flex flex-col justify-center '>
-          <div className='w-full pt-36 pb-14 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start'>
+          <motion.div
+            initial={{ opacity: 0, y: '-50%' }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: '-50%' }}
+            transition={transition1} 
+            className='w-full pt-36 pb-14 lg:pt-0 lg:pb-0 lg:w-auto z-10 lg:absolute flex flex-col justify-center items-center lg:items-start'
+          >
             <h1 className='h1'>
               Photographer <br /> & Videographer
             </h1>
@@ -34,7 +40,7 @@ const Home = () => {
               Birmingham, UK
             </p>
             <Link to={'/contact'} className='btn mb-[30px]'>Get in touch</Link>
-          </div>
+          </motion.div>
 
           <div className='flex justify-end max-h-96 lg:max-h-max'>
             <div className='relative lg:-right-40 overflow-hidden'>
