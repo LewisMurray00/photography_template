@@ -5,10 +5,22 @@ import AboutWoman from '../Img/About/AboutWoman.png'
 
 //import link
 import { Link } from 'react-router-dom'
- 
+
+// Import Motion
+import { motion } from 'framer-motion'
+
+//import transition
+import {transition1} from '../transitions'
+
 const About = () => {
   return (
-    <section className='section'>
+    <motion.section
+      initial={{ opacity: 0, y: '100%' }}
+      animate={{ opacity: 0, y: 0 }}
+      exit={{ opacity: 0, y: '100%' }}
+      transition={transition1} 
+      className='section'
+    >
       <div className='container mx-auto h-full relative'>
         
         {/* Text and image wrapper */}
@@ -38,7 +50,7 @@ const About = () => {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   )
 }
 
